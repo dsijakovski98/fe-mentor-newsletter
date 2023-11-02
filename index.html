@@ -25,39 +25,54 @@
 	</head>
 	<body>
 		<main>
-			<section>
-				<h1>Stay updated!</h1>
-				<h2>Join 60,000+ product managers receiving monthly updates on:</h2>
+			<div class="dashboard">
+				<section>
+					<h1>Stay updated!</h1>
+					<h2>Join 60,000+ product managers receiving monthly updates on:</h2>
 
-				<ul>
-					<li>Product discovery and building what matters</li>
-					<li>Measuring to ensure updates are a success</li>
-					<li>And much more!</li>
-				</ul>
+					<ul>
+						<li>Product discovery and building what matters</li>
+						<li>Measuring to ensure updates are a success</li>
+						<li>And much more!</li>
+					</ul>
 
-				<form>
-					<div class="form-group">
-						<label for="email">Email address</label>
-						<input
-							type="email"
-							name="email"
-							id="email"
-							placeholder="email@company.com"
+					<form>
+						<div class="form-group">
+							<label for="email">Email address</label>
+							<input
+								type="text"
+								name="email"
+								id="email"
+								placeholder="email@company.com"
+							/>
+						</div>
+
+						<button type="submit">Subscribe to monthly newsletter</button>
+					</form>
+				</section>
+				<div class="img-container">
+					<picture>
+						<source
+							media="(max-width: 900px)"
+							srcset="./images/illustration-sign-up-mobile.svg"
+							role="presentation"
 						/>
-					</div>
+						<img src="./images/illustration-sign-up-desktop.svg" role="presentation" />
+					</picture>
+				</div>
+			</div>
 
-					<button type="submit">Subscribe to monthly newsletter</button>
-				</form>
-			</section>
-			<div class="img-container">
-				<picture>
-					<source
-						media="(max-width: 900px)"
-						srcset="./images/illustration-sign-up-mobile.svg"
-						role="presentation"
-					/>
-					<img src="./images/illustration-sign-up-desktop.svg" role="presentation" />
-				</picture>
+			<div class="thank-you">
+				<img
+					src="./images/icon-success.svg"
+					alt="An orange circle with a white checkmark inside."
+				/>
+				<h2>Thanks for subscribing!</h2>
+				<p>
+					A confirmation email has been sent to <b>sample@domain.com</b>. Please open it
+					and click the button inside to confirm your subscription.
+				</p>
+				<button>Dismiss message</button>
 			</div>
 		</main>
 	</body>

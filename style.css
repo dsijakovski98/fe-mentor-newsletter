@@ -75,21 +75,24 @@ body {
 	background-color: var(--dark-grey);
 }
 
-main {
+.dashboard,
+.thank-you {
+	border-radius: var(--radius);
+	background-color: var(--white);
+	color: var(--dark-grey);
+}
+
+.dashboard {
 	max-width: 1000px;
+
 	display: grid;
 	grid-template-columns: 1fr auto;
 	align-items: center;
 
 	padding: 1rem;
-
-	border-radius: var(--radius);
-
-	background-color: var(--white);
 }
 
 section {
-	color: var(--dark-grey);
 	padding-inline: 4rem;
 }
 
@@ -132,7 +135,8 @@ form {
 	gap: 1.2rem;
 }
 
-form :is(input, button) {
+input,
+button {
 	border-radius: 6px;
 	padding: 0.8rem 1.2rem;
 }
@@ -188,7 +192,7 @@ button::after {
 	content: "";
 
 	position: absolute;
-	inset: -1px;
+	inset: -2px;
 
 	background: var(--tomato);
 
@@ -221,21 +225,32 @@ button:focus-visible::after {
 	opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
-	section {
-		padding-inline: 2rem;
-	}
+/* Thank you section */
+.thank-you {
+	max-width: 500px;
+
+	display: grid;
+	gap: 2rem;
+
+	padding: 3rem;
+
+	display: none;
+}
+
+.thank-you h2 {
+	line-height: 1;
+	font-size: 3.5rem;
 }
 
 @media screen and (max-width: 900px) {
-	main {
+	.dashboard {
 		grid-template-rows: auto 1fr;
 		grid-template-columns: 1fr;
 
 		padding: 0;
 	}
 
-	main .img-container {
+	.dashboard .img-container {
 		display: flex;
 		justify-content: center;
 	}
@@ -246,6 +261,10 @@ button:focus-visible::after {
 		padding: 3rem;
 		padding-top: 1rem;
 		min-width: 475px;
+	}
+
+	.thank-you p {
+		margin-bottom: 10rem;
 	}
 }
 
