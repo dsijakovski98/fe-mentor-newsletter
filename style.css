@@ -143,16 +143,38 @@ button {
 
 .form-group {
 	display: grid;
+	grid-template-areas:
+		"label"
+		"input";
 	gap: 0.25rem;
 }
 
+.form-group:has(input[aria-invalid="true"]) {
+	grid-template-areas:
+		"label error"
+		"input input";
+}
+
+.error {
+	grid-area: error;
+
+	text-align: end;
+	color: var(--tomato);
+}
+
 label,
-button {
+button,
+.error {
 	font-weight: 700;
 	font-size: 14px;
 }
 
+label {
+	grid-area: label;
+}
+
 input {
+	grid-area: input;
 	border: 1px solid var(--light-grey);
 }
 
